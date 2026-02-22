@@ -7,7 +7,7 @@ of articles with blue accent heading style.
 
 USAGE EXAMPLE:
 <RelatedLinks
-  title="RELATED STORIES"
+  title="PAST REPORTING"
   links={[
     { headline: 'Mayor Announces New Transit Plan', href: '/transit-plan' },
     { headline: 'Budget Talks Continue Downtown', href: '/budget-talks' }
@@ -16,7 +16,7 @@ USAGE EXAMPLE:
 -->
 <script>
   let {
-    title = 'RELATED STORIES',
+    title = 'PAST REPORTING',
     links = [],
   } = $props();
 </script>

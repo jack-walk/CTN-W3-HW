@@ -16,6 +16,7 @@ USAGE EXAMPLE:
 <script>
   let {
     headline,           // Required: The main title of the article
+    subheadline = '',   // Optional: The subheadline/deck text
     byline = '',        // Optional: The author's name(s)
     pubDate = '',       // Optional: Publication date in YYYY-MM-DD format
   } = $props();
@@ -39,6 +40,10 @@ USAGE EXAMPLE:
 
 <header class="article-header">
   <h1 class="headline">{headline}</h1>
+  
+  {#if subheadline}
+    <p class="subheadline">{subheadline}</p>
+  {/if}
 
   {#if byline || pubDate}
     <div class="meta">
@@ -82,6 +87,16 @@ USAGE EXAMPLE:
     color: var(--color-dark);
   }
 
+  .subheadline {
+    font-family: var(--font-sans);
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-medium-gray);
+    font-style: italic;
+  }
+
   .meta {
     display: inline-flex;
     flex-direction: column;
@@ -116,6 +131,10 @@ USAGE EXAMPLE:
   @include tablet {
     .headline {
       font-size: 2.75rem;
+    }
+
+    .subheadline {
+      font-size: 1.25rem;
     }
 
     .meta {
