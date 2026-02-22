@@ -18,6 +18,8 @@ USAGE EXAMPLE:
 -->
 
 <script>
+  import { asset } from '$app/paths';
+
   let { authorPhoto, authorName, authorDesc, authorTwitter, authorEmail, authorLinkedIn, authorLink } = $props();
 </script>
 
@@ -27,7 +29,7 @@ USAGE EXAMPLE:
     <!-- Infobox Navigation -->
     <nav class="infobox-nav" aria-label="Infobox navigation">
     <div class="side1">
-        <img class="authorImg" src={authorPhoto} alt="A portrait photo of {authorName}."/>
+        <img class="authorImg" src={asset(authorPhoto)} alt="A portrait photo of {authorName}."/>
         <br><p>Author: <b><a href={authorLink}>{authorName}</a></b></p></div>
         <span class="infobox-divider"></span>
         <div class="side2">
