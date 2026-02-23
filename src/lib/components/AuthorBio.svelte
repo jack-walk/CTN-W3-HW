@@ -35,15 +35,15 @@ USAGE EXAMPLE:
         
         <div class="social-links">
         {#if authorTwitter}
-            <a href={authorTwitter} class="Twitter"><img class = "twitterImg"src="/twitter.png" alt="Twitter icon"></a>
+            <a href={authorTwitter} class="Twitter"><img class = "twitterImg"src="twitter.png" alt="Twitter icon"></a>
         {/if}
 
         {#if authorEmail}
-            <a href={"mailto:" + authorEmail} class="Email"><img class="emailImg"src="/email.png" alt="Email icon"></a>
+            <a href={"mailto:" + authorEmail} class="Email"><img class="emailImg"src="email.png" alt="Email icon"></a>
         {/if}
 
         {#if authorLinkedIn}
-            <a href={authorLinkedIn} class="LinkedIn"><img class="linkedInImg"src="/linkedin.png" alt="LinkedIn icon"></a>
+            <a href={authorLinkedIn} class="LinkedIn"><img class="linkedInImg"src="linkedin.png" alt="LinkedIn icon"></a>
         {/if}
         </div></div>
     </nav>
